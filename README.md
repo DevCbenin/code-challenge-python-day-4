@@ -1,27 +1,17 @@
-# Hamming
+# Isogram
 
-Calculate the Hamming Distance between two DNA strands.
+Determine if a word or phrase is an isogram.
 
-Your body is made up of cells that contain DNA. Those cells regularly wear out and need replacing, which they achieve by dividing into daughter cells. In fact, the average human body experiences about 10 quadrillion cell divisions in a lifetime!
+An isogram (also known as a "nonpattern word") is a word or phrase without a repeating letter, however spaces and hyphens are allowed to appear multiple times.
 
-When cells divide, their DNA replicates too. Sometimes during this process mistakes happen and single pieces of DNA get encoded with the incorrect information. If we compare two strands of DNA and count the differences between them we can see how many mistakes occurred. This is known as the "Hamming Distance".
+Examples of isograms:
 
-We read DNA using the letters C,A,G and T. Two strands might look like this:
+- lumberjacks
+- background
+- downstream
+- six-year-old
 
-    GAGCCTACTAACGGGAT
-    CATCGTAATGACGGCCT
-    ^ ^ ^  ^ ^    ^^
-
-They have 7 differences, and therefore the Hamming Distance is 7.
-
-The Hamming Distance is useful for lots of things in science, not just biology, so it's a nice phrase to be familiar with :)
-
-# Implementation notes
-
-The Hamming distance is only defined for sequences of equal length, so
-an attempt to calculate it between sequences of different lengths should
-not work. The general handling of this situation (e.g., raising an
-exception vs returning a special value) may differ between languages.
+The word *isograms*, however, is not an isogram, because the s repeats.
 
 
 ## Exception messages
@@ -40,20 +30,9 @@ raise Exception("Meaningful message indicating the source of the error")
 
 ## Running the tests
 
-To run the tests, run `pytest hamming_test.py`
+To run the tests, run `pytest isogram_test.py`
 
 Alternatively, you can tell Python to run the pytest module:
-`python -m pytest hamming_test.py`
+`python -m pytest isogram_test.py`
 
-### Common `pytest` options
-
-- `-v` : enable verbose output
-- `-x` : stop running tests on first failure
-- `--ff` : run failures from previous test before running other test cases
-
-For other options, see `python -m pytest -h`
-
-## Source
-
-The Calculating Point Mutations problem at Rosalind [http://rosalind.info/problems/hamm/](http://rosalind.info/problems/hamm/)
 
